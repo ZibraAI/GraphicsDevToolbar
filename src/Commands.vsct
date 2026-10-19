@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Commands package="guidGraphicsDevToolbarPackage">
+    <Menus>
+      <Menu guid="guidGraphicsDevToolbarCmdSet" id="Toolbar" type="Toolbar">
+        <CommandFlag>DefaultDocked</CommandFlag>
+        <Strings>
+          <ButtonText>Graphics Dev</ButtonText>
+          <CommandName>Graphics Dev</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidGraphicsDevToolbarCmdSet" id="GroupProject" priority="0x0100">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="Toolbar" />
+      </Group>
+      <Group guid="guidGraphicsDevToolbarCmdSet" id="GroupD3D" priority="0x0200">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="Toolbar" />
+      </Group>
+      <Group guid="guidGraphicsDevToolbarCmdSet" id="GroupVulkan" priority="0x0300">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="Toolbar" />
+      </Group>
+      <Group guid="guidGraphicsDevToolbarCmdSet" id="GroupCapture" priority="0x0400">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="Toolbar" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidArguments" priority="0x0100" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupProject" />
+        <Icon guid="guidGraphicsDevImages" id="imgArguments" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Arguments</ButtonText>
+          <CommandName>GraphicsDev.EditArguments</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidCMake" priority="0x0200" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupProject" />
+        <Icon guid="guidGraphicsDevImages" id="imgCMake" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>CMake</ButtonText>
+          <CommandName>GraphicsDev.RerunCMake</CommandName>
+        </Strings>
+      </Button>
+
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidD3DOverride" priority="0x0100" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupD3D" />
+        <Icon guid="guidGraphicsDevImages" id="imgD3DOverride" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>D3D Override</ButtonText>
+          <CommandName>GraphicsDev.ToggleD3DOverride</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidDebugLayer" priority="0x0200" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupD3D" />
+        <Icon guid="guidGraphicsDevImages" id="imgDebugLayer" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Debug Layer</ButtonText>
+          <CommandName>GraphicsDev.ToggleDebugLayer</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidGBV" priority="0x0300" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupD3D" />
+        <Icon guid="guidGraphicsDevImages" id="imgGBV" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>GBV</ButtonText>
+          <CommandName>GraphicsDev.ToggleGBV</CommandName>
+        </Strings>
+      </Button>
+
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidVulkanConfigurator" priority="0x0100" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupVulkan" />
+        <Icon guid="guidGraphicsDevImages" id="imgVulkanConfigurator" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Vulkan Configurator</ButtonText>
+          <CommandName>GraphicsDev.OpenVulkanConfigurator</CommandName>
+        </Strings>
+      </Button>
+
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidRenderDoc" priority="0x0100" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupCapture" />
+        <Icon guid="guidGraphicsDevImages" id="imgRenderDoc" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>RenderDoc</ButtonText>
+          <CommandName>GraphicsDev.OpenInRenderDoc</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidGraphicsDevToolbarCmdSet" id="cmdidPix" priority="0x0200" type="Button">
+        <Parent guid="guidGraphicsDevToolbarCmdSet" id="GroupCapture" />
+        <Icon guid="guidGraphicsDevImages" id="imgPix" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>PIX</ButtonText>
+          <CommandName>GraphicsDev.OpenInPix</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidGraphicsDevToolbarPackage" value="{785328a1-2fa8-46dd-b309-720494ce6328}" />
+    <GuidSymbol name="guidGraphicsDevToolbarCmdSet" value="{f030a9f8-1b33-45cd-b318-59e8c42fd2fd}">
+      <IDSymbol name="Toolbar" value="0x1000" />
+      <IDSymbol name="GroupProject" value="0x1100" />
+      <IDSymbol name="GroupD3D" value="0x1101" />
+      <IDSymbol name="GroupVulkan" value="0x1102" />
+      <IDSymbol name="GroupCapture" value="0x1103" />
+      <IDSymbol name="cmdidArguments" value="0x0100" />
+      <IDSymbol name="cmdidD3DOverride" value="0x0101" />
+      <IDSymbol name="cmdidDebugLayer" value="0x0102" />
+      <IDSymbol name="cmdidGBV" value="0x0103" />
+      <IDSymbol name="cmdidCMake" value="0x0104" />
+      <IDSymbol name="cmdidRenderDoc" value="0x0105" />
+      <IDSymbol name="cmdidPix" value="0x0106" />
+      <IDSymbol name="cmdidVulkanConfigurator" value="0x0107" />
+    </GuidSymbol>
+    <!-- Must match GraphicsDevToolbar.imagemanifest -->
+    <GuidSymbol name="guidGraphicsDevImages" value="{208138ab-b3ba-4ca0-9fa7-be66259bf122}">
+      <IDSymbol name="imgArguments" value="1" />
+      <IDSymbol name="imgCMake" value="2" />
+      <IDSymbol name="imgD3DOverride" value="3" />
+      <IDSymbol name="imgDebugLayer" value="4" />
+      <IDSymbol name="imgGBV" value="5" />
+      <IDSymbol name="imgRenderDoc" value="6" />
+      <IDSymbol name="imgPix" value="7" />
+      <IDSymbol name="imgVulkanConfigurator" value="8" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

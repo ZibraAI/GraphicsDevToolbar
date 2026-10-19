@@ -1,0 +1,23 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Package
+        shell: pwsh
+        run: ./scripts/package.ps1
+
+      - name: Upload package
+        uses: actions/upload-artifact@v7
+        with:
+          # A .vsix is already a zip, so upload it as is instead of wrapping it in another one.
+          archive: false
+          path: artifacts/GraphicsDevToolbar.vsix
+          if-no-files-found: error

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Toolbar icons. To replace an icon, update Resources\Icons\*.png and rebuild. -->
+<!-- VS caches these images in %LocalAppData%\Microsoft\VisualStudio\<version>Exp\ImageLibrary\ImageLibrary.cache; delete it if old icons persist. -->
+<!-- PackageGuid is required for VS to load our package (and thus GraphicsDevToolbar.dll) before resolving the pack URIs below. -->
+<ImageManifest xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014" PackageGuid="{785328a1-2fa8-46dd-b309-720494ce6328}">
+  <Symbols>
+    <!-- Pack URI: the PNGs are compiled into GraphicsDevToolbar.dll as WPF resources (file URIs are not supported). -->
+    <String Name="Icons" Value="/GraphicsDevToolbar;Component/Resources/Icons" />
+    <Guid Name="GraphicsDevImages" Value="{208138ab-b3ba-4ca0-9fa7-be66259bf122}" />
+    <ID Name="Arguments" Value="1" />
+    <ID Name="CMake" Value="2" />
+    <ID Name="D3DOverride" Value="3" />
+    <ID Name="DebugLayer" Value="4" />
+    <ID Name="GBV" Value="5" />
+    <ID Name="RenderDoc" Value="6" />
+    <ID Name="Pix" Value="7" />
+    <ID Name="VulkanConfigurator" Value="8" />
+  </Symbols>
+  <Images>
+    <Image Guid="$(GraphicsDevImages)" ID="$(Arguments)">
+      <Source Uri="$(Icons)/Arguments.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/Arguments.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/Arguments.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(CMake)">
+      <Source Uri="$(Icons)/CMake.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/CMake.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/CMake.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(D3DOverride)">
+      <Source Uri="$(Icons)/D3DOverride.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/D3DOverride.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/D3DOverride.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(DebugLayer)">
+      <Source Uri="$(Icons)/DebugLayer.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/DebugLayer.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/DebugLayer.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(GBV)">
+      <Source Uri="$(Icons)/GBV.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/GBV.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/GBV.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(RenderDoc)">
+      <Source Uri="$(Icons)/RenderDoc.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/RenderDoc.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/RenderDoc.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(Pix)">
+      <Source Uri="$(Icons)/Pix.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/Pix.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/Pix.32.png"><Size Value="32" /></Source>
+    </Image>
+    <Image Guid="$(GraphicsDevImages)" ID="$(VulkanConfigurator)">
+      <Source Uri="$(Icons)/VulkanConfigurator.16.png"><Size Value="16" /></Source>
+      <Source Uri="$(Icons)/VulkanConfigurator.24.png"><Size Value="24" /></Source>
+      <Source Uri="$(Icons)/VulkanConfigurator.32.png"><Size Value="32" /></Source>
+    </Image>
+  </Images>
+</ImageManifest>

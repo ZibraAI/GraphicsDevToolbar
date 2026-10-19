@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/vsix-publish",
+  "categories": [ "debugging", "build", "other" ],
+  "identity": {
+    "internalName": "GraphicsDevToolbar"
+  },
+  "overview": "overview.md",
+  "priceCategory": "free",
+  "publisher": "Zibra AI",
+  "private": false,
+  "qna": true,
+  "repo": "https://github.com/ZibraAI/GraphicsDevToolbar"
+}
