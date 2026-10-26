@@ -2,6 +2,8 @@
 
 A Visual Studio 2022+ extension that adds a **Graphics Dev** toolbar (View > Toolbars > Graphics Dev). The buttons act on the current C++ startup project. A button is grayed out when it can't be used, and its tooltip says why.
 
+![Graphics Dev toolbar](docs/images/toolbar.png)
+
 | Button | What it does |
 |---|---|
 | **Arguments** | Edits the debugger command line arguments as a list of lines, each of which can be turned on or off, for one configuration or all of them. |
@@ -14,11 +16,27 @@ A Visual Studio 2022+ extension that adds a **Graphics Dev** toolbar (View > Too
 | **PIX** | Builds the project and opens PIX with the same launch settings. |
 
 Notes:
-- Argument lines are saved per project and configuration in `%LOCALAPPDATA%\GraphicsDevToolbar\arguments.json`, so they survive regenerating the project. Tools > Options > Graphics Dev Toolbar can re-apply them whenever a project loads. Off by default, because it overwrites the project's current arguments. The previous arguments are logged to the output pane. Arguments changed while the project stays loaded, e.g. in the Property Pages, are kept. The arguments window shows them and offers to restore the saved ones.
-- The d3dconfig debug layer and GBV settings are global: they apply to every app in the d3dconfig list. The toolbar reads d3dconfig state when the solution, startup project or configuration changes.
+- The d3dconfig debug layer and GBV settings are global: they apply to every app in the d3dconfig list. The toolbar reads d3dconfig state when the solution, startup project, or configuration changes.
 - PIX reads its launch settings only when it starts, so the toolbar asks you to close a running PIX first.
 - Tools are detected when Visual Studio starts.
 - Activity is logged to the **Graphics Dev Toolbar** pane of the Output window.
+
+## Command line arguments
+
+The **Arguments** button opens a window that edits the startup project's debugger command line arguments as a list of lines. The enabled lines are trimmed and joined with spaces, and the result is the command line the debugger passes to the program.
+
+![Arguments window](docs/images/argument_window.png)
+
+- **Turn a line on or off** with its checkbox. A disabled line stays in the list but isn't passed, so you can keep alternative options at hand and switch between them with one click.
+- **Add a line** by typing in the blank line at the bottom. A new blank line always appears below it. Enter moves to the next line, Up and Down move between lines, and Backspace on an empty line goes back to the previous one.
+- **Remove a line** with its remove button, or by clearing it and moving away.
+- **Reorder lines** by dragging them by the grip on the left.
+- **Pick the configuration** at the top: the active one, a specific one, or **All Configurations**.
+- Below the lines, the window shows the **resulting command line**, and also the **evaluated command line** when there are variables to evaluate.
+
+### Where the lines are saved
+
+Argument lines are saved per project and configuration in `%LOCALAPPDATA%\GraphicsDevToolbar\arguments.json`, so they survive regenerating the project. There's an option in `Tools > Options > Graphics Dev Toolbar` that re-applies them whenever a project loads. This is off by default, because it overwrites the project's current arguments. If by using this option you overwrote arguments by mistake, you can find previous arguments logged to the output pane.
 
 ## Building
 
